@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std ;
+
+int main (  )
+{ 
+     int n1,n2; 
+     char cho;
+     char opr;
+     int res ;
+     
+ do 
+ {
+ cout<<"pls input number1 and number2 ";
+ cin>>n1>>n2 ;
+ 
+ cout<<"pls choose the opr : "
+       "+) add"
+       "_)sub "
+       "*)mul "
+       "/) dis " ;
+ cin>>opr;
+      
+      
+     switch (opr){
+     case '+' :
+    cout<<n1+n2;
+      case  '-' :
+     cout<<n1-n2 ;
+      case '*' :
+     cout<<n1*n2;
+     case '/' :
+      {
+           if (n1!=0 && n2!=0)
+           cout<<n1/n2;
+           else
+           cout<<"cant use 0"; }
+      default :
+      break;
+      
+     }
+      cout<<" you need use agine ?y/n ";
+      cin>>cho;   
+                       
+      }while (cho != 'n'  );
+
+ 
+ 
+ return 0;
+}
